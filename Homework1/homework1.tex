@@ -1,0 +1,34 @@
+\documentclass[12pt]{cgtmd}
+
+\begin{document}
+\handout{1}{July 4, 2013}{Problem Set 1}
+
+\begin{enumerate}
+    \item 
+        \begin{enumerate}
+            \item Only one. 
+
+                We will prove that the only NE is when each player take Rock, Paper and Scissors with equal probility. For convenience we use a triple to represent the probality of Rock, Paper and Scissors.
+
+                First we prove this is a NE. Notice for each player, given the other's strategy $(\frac{1}{3}, \frac{1}{3}, \frac{1}{3})$, Let this players strategy be $(p_1, p_2, p_3)$, then $u = \sum(\frac{1}{3}p_i - \frac{1}{3}p_i) = 0$, so any mixed strategy is a best response. Particularly, $(\frac{1}{3}, \frac{1}{3}, \frac{1}{3})$ is a best mixed response.
+
+                On the other hand, if in another NE one player's mixed strategy $(p_1, p_2, p_3)$, $p_i = \frac{1}{3}$ does not hold. Let's just suppose $p_1$ is the biggest one. Then the best mixed response for the other will be $(0, 1, 0)$, then $(p_1, p_2, p_3)$ should be $(0, 0, 1)$, that is a controdiction.
+            \item We use a pair to represent the probility of B and S. 
+                
+                $u(B, B) = (2, 1), u(S, S) = (1, 2)$, others euqal to zero.
+
+                Let $\sigma_1 = (\frac{2}{3}, \frac{1}{3}), \sigma_2 = (\frac{1}{3}, \frac{2}{3})$, we will prove this is a mixed NE. On one hand, iven $\sigma_2 = (\frac{1}{3}, \frac{2}{3})$. Let $\sigma_1$ be $(p, q)$. Then $u_1 = 2\frac{1}{3}p + \frac{2}{3}q = \frac{2}{3}(p + q) = \frac{2}{3}$, so  the strategy of player 1 is a best mixed response. By symmetry, this is true for player 2 either.
+            \item There are two pure equilibrum in BoS. Both B and both S. Since in each case, for each player, change to another strategy won't get more score.
+            \item IN the constructed game, each player can choose a real number, and his utility is equal to the number he choose. Obviously, no matter what strategy one player choose, he can always change to a better one.
+        \end{enumerate}
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
