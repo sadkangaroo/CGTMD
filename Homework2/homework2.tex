@@ -1,0 +1,71 @@
+\documentclass[12pt]{cgtmd}
+
+\begin{document}
+\handout{2}{July 8, 2013}{Problem Set 2}
+
+\begin{enumerate}
+    \item 
+        \begin{enumerate}
+            \item
+                First, we will show that action $D$ is not a best response.
+
+                We denote the probility of UL, UR, DL, DR as $a, b, c, d$, and according to the problem we have $ad = bc$ and $a + b + c + d = 1$.  Suppose action $D$ is a best response. Then according to the definition, we have
+                $6(a + d) \geq 9(c + d)$
+
+                Thus
+                \begin{equation}
+                    a + d \geq \frac{3}{5}
+                \end{equation}
+                and
+                $$2\sqrt{ad} = 2\sqrt{bc} \leq b + c \leq \frac{2}{5}$$
+                which means
+                \begin{equation}
+                    ad \leq \frac{1}{25}
+                \end{equation}
+                On the other hand, we also have $6(a + d) \geq 9a$ and $6(a + d) \geq 9d$, which means
+                \begin{equation}
+                    a \geq \frac{d}{2} 
+                \end{equation}
+                and
+                \begin{equation}
+                    d \geq \frac{a}{2}
+                \end{equation}
+                We subtitute (3) and (4) into (2), get $a \leq \frac{\sqrt{2}}{5}$ and $d \leq \frac{\sqrt{2}}{5}$, which leads to
+                $$a + d \leq \frac{\sqrt{2}}{5} + \frac{\sqrt{2}}{5}  = \frac{2\sqrt{2}}{5} < \frac{3}{5}$$
+                which contradicts with (1).
+            \item 
+                Then we will prove $D$ is not strictly dominated. To see this, suppose its strictly dominated by
+                a mixed strategy which is a combination of A, B and C. Denote the probability of $A$, $B$, $C$ by $P_1$, $P_2$, $P_3$, where 
+                \begin{equation}
+                    P_1 + P_2 + P_3 = 1
+                \end{equation}
+                However, we also have $9P_1 > 6$ and $9P_3 > 6$, which leads to 
+                $$P_1 + P_3 > \frac{4}{3}$$
+                which contradicts with (5).
+        \end{enumerate}
+    \item Let's consider a one-player game. Each turn, he can decide to terminate the game, or continue to play. With Every finite history his payoff is 0, with a infinite history his payoff is 1. Now let's consider a strategy profile, in which he always choose to terminate the game, no matter what state he is in. 
+        
+        It satisfies the one deviation property, since only changing the strategy for one state won't make him to get more utility. However, this game's SPE is to choose to continue to play no matter which state he is in, which is the only way leads to the payoff 1. Thus we have constructed a strategy profile which satisties the one deviation property but is not a SPE. 
+    \item Before the induction, we should notice that any pirate will always vote for himself, and if after the current pirate is thrown overboard, one would not get less utility, he won't vote for the current pirate.
+
+        First we consider the situation that there are only two pirates, say $D$ and $E$, D can take all coins.
+
+        Then three pirates, say $C$ to $E$. $C$ accepts it. If $C$ is thrown overboard $D$ can get all the coins, so $D$ rejects it. Then $E$ becomes a important person. If $E$ always gets nothing, $E$ prefers to throw $C$ overboard, so $C$ will give $E$ one coin and himself 99 coins.
+
+        Then four pirates, say $B$ to $E$. $B$ accepts it. $C$, $D$ and $E$ will accept it only if they get at least 100, 1 and 2 coin(s). So $B$ will give $D$ 1 coin and himself 99 coins.
+
+        Finally five pirates. $A$ accepts it. $B$, $C$, $D$ and $E$ will accept it only if they get at least 100, 1, 2 and 1 coin(s). So $A$ will give himself 98 coins and give $C$ and $E$ both 1 coin.
+
+        The final distribution of coins will be $(98, 0, 1, 0, 1)$.
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
