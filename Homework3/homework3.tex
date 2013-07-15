@@ -5,6 +5,39 @@
 
 \begin{enumerate}
     \item 
+        \begin{enumerate}
+            \item Suppose there are $k$ players choosing route two and $(n - k)$ players choosing route one. Then the total cost is
+                $$f(k) = (n - k) + k(\frac{k}{n})^d$$
+                Take the derivative of it, when taking the minimal value, we get 
+                $$k_0 = \frac{n}{(d + 1)^{\frac{1}{d}}}$$
+                We can easily check that in this case k takes its minimal value.
+                On the other hand, consider the value of $k$, we find that only when $k = n$ and $k = n - 1$, it is a NE.
+                Now we have $f(n) = n$ and $f(n - 1) = 1 + (n - 1)(\frac{n - 1}{n})^d$, obviously $f(n) > f(n - 1)$.
+                So the PoA is 
+                \begin{align}
+                    \frac{f(n)}{f(k_0)} = \frac{1}{\frac{1}{(d + 1)^{\frac{d + 1}{d}}} + 1 - \frac{1}{(d + 1)^{\frac{1}{d}}}}
+                \end{align}
+            \item When $d$ goes to infinity, $(d + 1)^{\frac{d + 1}{d}}$ goes to infinity, $(d + 1)^{\frac{1}{d}}$ goes to 1, then the PoA goes to infinity. 
+        \end{enumerate}
+    \item Let $X$ denote the network's optimal solution. If there is a NE, whose cost is greater than $NX$. Then there must be a player whose cost is greater then $X$. This player can then change his strategy to any other one in the optimal solution, the new cost must be less or equal to $X$. Thus this is not a NE, which is a contradiction.
+    \item First, we will find an optimal solution to the problem. For each player, his expected cost is at least one, so the total cost is at least $n$. When each player choose a different machine, the total cost can reach n. So $c_{min} = n$.
+
+        Then we will find all the NE, pure or mixed. We convert this game into a graph. $n$ nodes representing players and $n$ nodes representing machines. If one player assign a positive probability to a machine, then there is a edge between them, the weight of the edge is the probability being assigned. Now we claim that any NE looks like this: For any player, the edges directly connected to him have the same weight, and the expected load of each machine are 1.
+
+        Next we will prove this claim. On the one hand, we prove that these graphs are NE. For any player, suppose his degree is $d$. Taking no consideration of this particular player, the expected load of machines connected to him is $(1 - \frac{1}{d})$, the expected load of other machines are $1$. So his strategy is really a best response. 
+        
+        On the other hand, we prove that other graphs are not NE. First we show that the expected load of all the machines are the same. Unfortunately I don't know how to prove it.
+        
+        Then we prove for each player, the edges directly connected to him have the same weight. Suppose it is not true, there will be a player $p$, and machines $A$ and $B$, $p$ choose $A$ with positive probability $q_a$ and choose $B$ with positive probability $q_b$, where $q_a > q_b$. Since the expected load of $A$ and $B$ are both $1$, this means among the other players, the expected load of $A$ is less than $B$. Then $p$ has no reason to assign a positive probability to $B$, this leads to a contradiction. 
+
+        Thus in a NE, for each player, let $d$ be his degree, his cost is
+        $$1 + (1 - \frac{1}{d})$$
+        It takes its maximal value when $d = n$. So 
+        $$c_{max} \leq n(2 - \frac{1}{n})$$ 
+        the maximal value can be reached when $d_i = n, \forall i$.
+
+        Finally, we can calculate the PoA, which is
+        $$\frac{c_{max}}{c_{min}} = \frac{n(2 - \frac{1}{n})}{n} = 2 - \frac{1}{n}$$
 \end{enumerate}
 
 \end{document}
