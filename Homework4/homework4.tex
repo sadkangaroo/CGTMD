@@ -10,7 +10,12 @@
         Next consider the center player. His utility can be calculated by $p(\sum H_i - \sum T_i) + q(\sum T_i - \sum H_i)$. If $q = p$, it is a NE if and only if $\sum H_i = \sum T_i$.  If $p > q$, his opponents will all choose $(1H, 0T)$, and the center players best response is $(0H, 1T)$, that is a contradiction. For $p < q$ is the same.
 
         Finally, we can conclude that all the NE are look like this: the center player's strategy is $(\frac{1}{2}H, \frac{1}{2}T)$, other players can choose arbitrary strategy as long as $\sum H_i = \sum T_i$.
-    \item 
+    \item For each player $p$, suppose in the combined CE, $p$ is recommended to choose strategy $A$. Let $u(A)$ be his expected utility if he chooses $A$. For any other strategy $B$ for $p$, let $u(B)$ be his expected utility if he chooses $B$. We also let $u_i(A)$ and $u_i(B)$ be the utilities in the $i_{th}$ original CE. Now we have
+        \begin{align*}
+            u(A) - u(B) &= \sum_{i = 1}^k \lambda_iu_i(A) - \sum_{i = 1}^k \lambda_iu_i(B)\\
+                        &= \sum_{i = 1}^k \lambda_i(u_i(A) - u_i(B))
+        \end{align*}
+        Since $u_i(A) \geq u_i(B)$ is always true. Then for each player we have $u(A) \geq u(B), \forall B$.
 
 \end{enumerate}
 
