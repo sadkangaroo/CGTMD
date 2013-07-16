@@ -1,0 +1,25 @@
+\documentclass[12pt]{cgtmd}
+
+\begin{document}
+\handout{4}{July 16, Year}{Problem Set 4}
+
+\begin{enumerate}
+    \item Suppose the player in the center prefer the opposite sides, the players around prefer the same sides. Then the player in the center choose strategy $(\frac{1 + \epsilon}{2}H, (\frac{1 - \epsilon}{2}T)$ and the players around choose stratege $(\frac{1}{2}H, \frac{1}{2}T)$, the player in the center has reached his best response, which with utility $0$. Now consider any other player, his best response is $(1H, 0T)$, the expected utility of which is $\epsilon$, and his current expected utility is $0$. Then we can conclude this is an $\epsilon$-NE.
+    \item First we consider the five players around. For each one of them, let's call him A, suppose the center player's strategy is $(pH, qT)$. If $p = q$, then any strategy for A is a best response. If $p > q$, then A's best response is $(1H, 0T)$. If $p < q$, A's best response is $(0H, 1T)$. 
+        
+        Next consider the center player. His utility can be calculated by $p(\sum H_i - \sum T_i) + q(\sum T_i - \sum H_i)$. If $q = p$, it is a NE if and only if $\sum H_i = \sum T_i$.  If $p > q$, his opponents will all choose $(1H, 0T)$, and the center players best response is $(0H, 1T)$, that is a contradiction. For $p < q$ is the same.
+
+        Finally, we can conclude that all the NE are look like this: the center player's strategy is $(\frac{1}{2}H, \frac{1}{2}T)$, other players can choose arbitrary strategy as long as $\sum H_i = \sum T_i$.
+    \item 
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
